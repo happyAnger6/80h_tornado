@@ -1,0 +1,77 @@
+{% extends "base.htm" %}
+
+{% block header_title %}主页{% end %}
+{% block body %}
+{% include "header.htm" %}
+
+
+<div class="main-container">
+	<!--主体-->
+	<div class="main-body">
+	
+		<div class="body-left-1">
+		<h3>今日公告:</h3>
+		<p>热烈庆祝中国进军世界杯亚洲区预选赛十二强赛!80后答题赢金币活动已全面开启!</p>
+		</div>
+		
+		<div class="body-left-2">
+		<div class="black-box"><img src="/static/images/black_box.jpg" width="100%" height="100%" /></div>
+		<div class="black-box-font"><marquee class="black-theme"> 今日通告:</marquee>
+		<marquee> 优秀班长:张晓平</marquee>
+		<marquee>差生:张晓安！</marquee>
+		<marquee>迟到:张晓安!</marquee>
+		<marquee>不交作业:张晓安</marquee>
+		</div>
+		</div>
+		
+		<div class="body-right">
+		<h3>80社区</h3>
+		<h4><a href="http://www.anger6.com">www.anger6.com</a></h4>
+		</div>
+		
+		<div class="body-center">
+		
+			<div class="body-menu">
+			<a href="/playgame">
+			<div class="body-img"><img src="/static/images/game.jpg" width="100%" height="100%" />   </div>
+			<div class="body-prompt"><h3>游戏</h3><p>这里有许多80后的小游戏</p></div>
+			<div class="body-jiantou"><img src="/static/images/right.png" width="100%" height="100%" /></div>
+			</a>
+			</div>
+			
+			<div class="body-menu">
+			<a href="/">
+						<div class="body-img"><img src="/static/images/luntan.png" width="100%" height="100%" />   </div>
+			<div class="body-prompt"><h3>论坛</h3><p>这里是80后畅所欲言的地方</p></div>
+			<div class="body-jiantou"><img src="/static/images/right.png" width="100%" height="100%" /></div>
+			</a>
+			</div>
+			
+			<div class="body-menu">
+			<a href="#">
+						<div class="body-img"><img src="/static/images/prop.jpg" width="100%" height="100%" />   </div>
+			<div class="body-prompt"><h3>80库</h3><p>这里有许多80后的好东西</p></div>
+			<div class="body-jiantou"><img src="/static/images/right.png" width="100%" height="100%" /></div>
+			</a>
+			</div>
+			
+			<div class="body-menu">
+			<a href="/class/detail">
+						<div class="body-img"><img src="/static/images/class.jpg" width="100%" height="100%" />   </div>
+			<div class="body-prompt"><h3>班级</h3><p>快来找到属于你的班级</p></div>
+			<div class="body-jiantou"><img src="/static/images/right.png" width="100%" height="100%" /></div>
+			</a>
+		    </div>
+		
+		</div>
+		</div>
+	
+	<div class="foot">
+	<h1>80社区,审核号ISO-90001</h1>
+	</div>
+	
+</div>
+
+{% end %}
+{% block footer_static %}
+{% end %}

@@ -1,0 +1,52 @@
+{% extends "base.htm" %}
+
+{% block header_title %}主页{% end %}
+{% block body %}
+
+<div class="right-container">
+
+    		<div class="jiang-zhuang">
+			<img src="static/images/2013012667341345.jpg" width="100%" height="100%" />
+			</div>
+
+    		<div class="right-prompt">恭喜你通过第<span class="number">{{ int(index)+1 }}</span>课,正确答案是<br />
+				<span class="right-answer">{{ right_answer }}</span><br />特表此章,以资鼓励
+			</div>
+
+    		<div class="gold-prompt">奖励:</div>
+
+			<div class="gold">
+				<img src="static/images/gold.jpg" />
+				<img src="static/images/gold.jpg" />
+				<img src="static/images/gold.jpg" />
+				<img src="static/images/gold.jpg" />
+				<img src="static/images/gold.jpg" />
+			</div>
+
+    		<div class="go-next">
+			<form type="hidden" action="/playgame" method="get">
+    		<input id="index" type="hidden" name="index" value="{{ index }}">
+			<button class="btn-next">下一课</button>
+			</form>
+			</div>
+</div>
+
+
+<!--<div id="gamepass">
+    <div id="result">
+            <lable>全对了!你的童年太完美了!</lable>
+        </div>
+</div>
+<div>
+    <form type="hidden" action="/playgame" method="get">
+    <input id="index" type="hidden" name="index" value="{{ index }}">
+        <button type="hidden" id="btn_submit">下一题</button>
+    </form>
+</div>-->
+
+
+
+{% raw xsrf_form_html() %}
+{% end %}
+{% block footer_static %}
+{% end %}

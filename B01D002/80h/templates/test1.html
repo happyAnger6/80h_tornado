@@ -1,0 +1,146 @@
+{% extends "base.htm" %}
+
+{% block header_title %}主页{% end %}
+{% block body %}
+{% include "header.htm" %}
+<div id="questions">
+<div id="music_question1">
+    <div class="question">1.下面的音乐是哪部动画片的主题曲?</div>
+    <div><img src="/static/images/syj1.jpg" width="300" height="150"></div>
+<div><audio controls="controls">
+  <source src="/static/music/lpsdlm.mp3" type="audio/mpeg">
+非常抱歉,你的浏览器不支持此功能.
+</audio></div>
+    <input type="radio" name="music_question1" value="a"/>
+    <label>美少女战士</label>
+    <input type="radio" name="music_question1" value="b"/>
+    <label>大头儿子和小头爸爸</label>
+    <input type="radio" name="music_question1" value="c"/>
+    <label>蓝皮鼠和大脸猫</label>
+    <input type="radio" name="music_question1" value="d"/>
+    <label>舒克和贝塔</label>
+</div>
+    <br/>
+    <div id="dh_question1">
+    <div class="question">2.下图是葫芦兄弟中的几娃?</div>
+    <div><img src="/static/images/hlxd_4wa.jpg" width="300" height="150"></div>
+    <input type="radio" name="dh_question1" value="a"/>
+    <label>三娃</label>
+    <input type="radio" name="dh_question1" value="b"/>
+    <label>五娃</label>
+    <input type="radio" name="dh_question1" value="c"/>
+    <label>四娃</label>
+    <input type="radio" name="dh_question1" value="d"/>
+    <label>六娃</label>
+</div>
+    <br/>
+    <div id="sp_question1">
+    <div class="question">3.下图中的卡片来自哪种食品?</div>
+    <div><img src="/static/images/xhd_kp1.jpg" width="300" height="150"></div>
+    <input type="radio" name="sp_question1" value="a"/>
+    <label>辣条</label>
+    <input type="radio" name="sp_question1" value="b"/>
+    <label>干脆面</label>
+    <input type="radio" name="sp_question1" value="c"/>
+    <label>跳跳糖</label>
+    <input type="radio" name="sp_question1" value="d"/>
+    <label>冰淇淋</label>
+</div>
+    <br/>
+    <div id="game_question1">
+    <div class="question">4.小伙伴们在玩什么游戏?</div>
+    <div><img src="/static/images/game_tpj.jpg" width="300" height="150"></div>
+    <input type="radio" name="game_question1" value="a"/>
+    <label>跳皮筋</label>
+    <input type="radio" name="game_question1" value="b"/>
+    <label>跳绳</label>
+    <input type="radio" name="game_question1" value="c"/>
+    <label>跳高</label>
+    <input type="radio" name="game_question1" value="d"/>
+    <label>跳大神</label>
+</div>
+    <br/>
+    <div id="game_question2">
+    <div class="question">5.下面的游戏名称是?</div>
+    <div><img src="/static/images/game_qmdz.jpg" width="300" height="150"></div>
+    <input type="radio" name="game_question2" value="a"/>
+    <label>点穴道</label>
+    <input type="radio" name="game_question2" value="b"/>
+    <label>弹玻璃球</label>
+    <input type="radio" name="game_question2" value="c"/>
+    <label>骑马打仗</label>
+    <input type="radio" name="game_question2" value="d"/>
+    <label>背人</label>
+    <br/>
+
+</div>
+    <br/>
+    <div id="study_question2">
+    <div class="question">6.下面这个标志的职务是?</div>
+    <div><img src="/static/images/zdz.jpg" width="300" height="150"></div>
+    <input type="radio" name="study_question2" value="a"/>
+    <label>班长</label>
+    <input type="radio" name="study_question2" value="b"/>
+    <label>小队长</label>
+    <input type="radio" name="study_question2" value="c"/>
+    <label>中队长</label>
+    <input type="radio" name="study_question2" value="d"/>
+    <label>大队长</label>
+</div>
+    <br/>
+    <div id="study_question1">
+    <div class="question">7.这只鹦鹉的名字是?</div>
+    <div><img src="/static/images/polly.jpg" width="300" height="150"></div>
+    <input type="radio" name="study_question1" value="a"/>
+    <label>polly</label>
+    <input type="radio" name="study_question1" value="b"/>
+    <label>bill</label>
+    <input type="radio" name="study_question1" value="c"/>
+    <label>bolly</label>
+    <input type="radio" name="study_question1" value="d"/>
+    <label>pily</label>
+</div>
+    <br/>
+    <div id="dh_question2">
+    <div class="question">8.下面的人物来自哪部动画片?</div>
+    <div><img src="/static/images/tyzz.jpg" width="300" height="150"></div>
+    <input type="radio" name="dh_question2" value="a"/>
+    <label>草原英雄小姐妹</label>
+    <input type="radio" name="dh_question2" value="b"/>
+    <label>哪吒闹海</label>
+    <input type="radio" name="dh_question2" value="c"/>
+    <label>天空之城</label>
+    <input type="radio" name="dh_question2" value="d"/>
+    <label>太阳之子</label>
+</div>
+    <br/>
+    <div id="zy_question1">
+    <div class="question">9.他是?</div>
+    <div><img src="/static/images/ls.jpg" width="300" height="150"></div>
+    <input type="radio" name="zy_question1" value="a"/>
+    <label>博林</label>
+    <input type="radio" name="zy_question1" value="b"/>
+    <label>牛振华</label>
+    <input type="radio" name="zy_question1" value="c"/>
+    <label>大成</label>
+    <input type="radio" name="zy_question1" value="d"/>
+    <label>洛桑</label>
+</div>
+    <br/>
+    </div>
+ <br/>
+    <div id="result">
+            <lable>全对了!你的童年太完美了!</lable>
+        </div>
+        <div id="result1">
+            <lable>没做对!!再加把劲!!!</lable>
+        </div>
+    </div>
+<br/>
+<div>
+        <button id="btn_submit">交卷</button>
+</div>
+{% end %}
+{% block footer_static %}
+<script src="{{ static_url('assets/js/games/game.js') }}"></script>
+{% end %}

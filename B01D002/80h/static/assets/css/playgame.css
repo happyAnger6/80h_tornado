@@ -1,0 +1,23 @@
+#btn_submit{
+    display:none;
+}
+
+#question_container{
+-moz-background-size:100% 100%;
+background-size:100% 100%;
+margin:2px;
+width:100%;
+height:100%;
+}
+
+#div_img{
+position:absolute;
+top:10%;
+left:30%;
+width:50%;
+height:60%;
+background-color:#FF0000;
+text-align:center;
+border:dashed;
+}
+

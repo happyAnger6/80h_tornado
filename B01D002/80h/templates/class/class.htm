@@ -1,0 +1,20 @@
+{% extends "../base.htm" %}
+
+{% block header_title %}主页{% end %}
+
+{% block header_static %}
+<link rel="stylesheet" href="{{ static_url('assets/css/class.css') }}">
+{% end %}
+
+{% block body %}
+{% include "../header.htm" %}
+<div class="class-container">
+<div class="class-left-container">
+	<div class="class-member">
+		<ol>班级成员</ol>
+	</div>
+</div>
+	</div>
+{% end %}
+{% block footer_static %}
+{% end %}

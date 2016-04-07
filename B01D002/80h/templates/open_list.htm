@@ -1,0 +1,108 @@
+{% extends "base.htm" %}
+
+{% block header_title %}主页{% end %}
+{% block body %}
+{% include "header.htm" %}
+<!--<div class="am-container">
+    <div class="am-g">
+        <div class="am-panel am-panel-default">
+         <div class="am-panel-hd">
+            <h3 class="am-panel-title">80后</h3>
+          </div>-->
+<div class = "zhangxp-div-main">
+
+    <div class ="zhangxp-div-bd1">
+
+                <div class="view_port">
+                  <div class="polling_message">
+                    <span id = "textDiv"><i>80社</i></span><span id = "textDiv1"><i>区</i>,</span><span id="textDiv2"><i>属于</i></span><span id="textDiv3"><i>80后</i></span><span id="textDiv4"><i>的社区!</i></span></div>
+                  <div class="cylon_eye"></div>
+                </div>
+
+                <div>
+                <table border="1" width="100%" cellspacing="0" cellpadding="0" height=20%>
+                <tr>
+                <td width="60%"><img src="/static/images/80er.jpg" class="prompt-photo"/></td>
+                <td width="40%" class="prompt-font"/><span class="zhangxp-header-promt">这是属于80后的天空,让我们一起追寻属于我们的时光,现在注册免费领<span class="am-icon-cog am-animation-spin am-animation-reverse" >100金币</span>哦!</span></td>
+                </tr>
+                </table>
+                </div>
+    </div>
+
+          <div class ="zhangxp-div-bd1">
+                <table>
+                      <tr>
+                    <td  class = "zhangxp-photo-td" >
+                  <audio id="musicHLXD" src="/static/music/hlxjg.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseHLXD();"><img src="/static/images/hlxd.jpg" class="zhangxp-topphoto" id="music_btnHLXD"/></a>
+                  </td>
+                  <td  class ="zhangxp-photo-td" > <audio id="musicHMJZ" src="/static/music/hmjz.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseHMJZ();"><img src="/static/images/hmjz.jpg" class="zhangxp-topphoto" id="music_btnHMJZ"/></a>
+                  </td>
+                   <td  class ="zhangxp-photo-td"><audio id="musicSKBT" src="/static/music/skbt.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseSKBT();"><img src="/static/images/skbt.jpg" class="zhangxp-topphoto" id="music_btnSKBT"/></a>
+                   </td>
+                  <td  class ="zhangxp-photo-td"> <audio id="musicHDL" src="/static/music/hdl.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseHDL();"><img src="/static/images/hdl.jpg" class="zhangxp-topphoto" id="music_btnHDL"/></a>
+                  </td>
+                  <td  class ="zhangxp-photo-td"> <audio id="musicCJML" src="/static/music/cjml.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseCJML();"><img src="/static/images/cjml.jpg" class="zhangxp-topphoto" id="music_btnCJML"/></a>
+                  </td>
+                  <td  class ="zhangxp-photo-td"><audio id="musicSJL" src="/static/music/sjl.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseSJL();"><img src="/static/images/sjl.jpg" class="zhangxp-topphoto" id="music_btnSJL"/></a>
+                  </td>
+                        <td  class ="zhangxp-photo-td"> <audio id="musicDHXY" src="/static/music/dhxy.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseDHXY();"><img src="/static/images/dhxy.jpg" class="zhangxp-topphoto" id="music_btnDHXY"/></a>
+                        </td>
+                        <td  class ="zhangxp-photo-td" ><audio id="musicSDYXZ" src="/static/music/sdyxz.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseSDYXZ();"><img src="/static/images/sdyxz.jpg" class="zhangxp-topphoto" id="music_btnSDYXZ"/></a>
+                        </td>
+                        <td  class ="zhangxp-photo-td"><audio id="musicTLBB" src="/static/music/tlbb.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                   <a class="zhangxp-image-hover" href="javascript:playPauseTLBB();"><img src="/static/images/tlbb.jpg" class="zhangxp-topphoto" id="music_btnTLBB"/></a>
+                        </td>
+                          <td><span class="zhangxp-header-promt"> 《------点击左边的图片有惊喜哦! </span> </td>
+                        </tr>
+                   </table>
+                </div>
+
+
+    <div class="zhangxp-div-bd1">
+            <table class="am-table minos-list am-text-sm am-table-bordered am-table-hover am-scrollable-horizontal">
+                  <tr class="null am-primary">
+                    <td class="am-hide-sm-down">时间</td>
+                    <td width="72%">标题</td>
+                    <td width="8%" class="am-text-center am-hide-sm-down">状态</td>
+                    <td class="am-text-right" width="10%">作者</td>
+                  </tr>
+                  {% for post in posts %}
+                  <tr class="row">
+                    <td class="am-link-muted am-hide-sm-down">{{ time_span(post['time']) }}</td>
+                    <td>
+                        {% if post.get('star') %}<span class="am-text-primary">[精华]</span>{% end %}
+                        <a href="/public/post/{{ post['_id'] }}" >
+                            {{ post['title'] }}
+                        </a>
+                    </td>
+                    <td class="am-text-center am-hide-sm-down">
+                        {% if post['charge'] %}
+                        <span class="am-badge am-badge-warning">{{ post['charge'] }}金币</span>
+                        {% else %}
+                        <span class="am-badge am-badge-success">免费</span>
+                        {% end %}
+                    </td>
+                    <td class="am-text-right"><a href="/user/detail/{{ post['user'] }}">{{ post['user'] }}</a></td>
+                  </tr>
+                  {% end %}
+              </table>
+                  <div class="am-panel-footer">
+                      {% raw pagenav(now = page, count = count, each = each, url = '/public/list/%d') %}
+                      <div class="am-cf"></div>
+                  </div>
+
+            </div>
+
+</div>
+{% end %}
+{% block footer_static %}
+    <script src="{{ static_url('assets/js/app.js') }}"></script>
+{% end %}

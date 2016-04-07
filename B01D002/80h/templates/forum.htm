@@ -1,0 +1,72 @@
+{% extends "base.htm" %}
+{% block body %}
+
+<!--{% include "header.htm" %}-->
+
+<body class="zhangxp-forum-body">
+        <div class="zhangxp-forum-container">
+
+               <div class = "zhangxp-forum-header"> <p class="zhangxp-font-cool"><a href="#">
+                80社区欢迎你
+              </a></p></div>
+
+            <div class="zhangxp-forum-left">
+                      <div class="am-panel-bd minos-sorts">
+                          {% for sort in sorts %}
+                          <a href="/sort/{{ sort['_id'] }}" class="am-btn am-btn-danger am-round">{{ sort["name"] }}</a>
+                          {% end %}
+                      </div>
+
+                      <table class="am-table minos-list am-text-sm am-table-bordered am-table-hover am-scrollable-horizontal">
+                          <tr class="null am-primary">
+                            <td class="am-hide-sm-down">时间</td>
+                            <td width="72%">标题</td>
+                            <td width="8%" class="am-text-center am-hide-sm-down">状态</td>
+                            <td class="am-text-right" width="10%">作者</td>
+                          </tr>
+                          {% for post in posts %}
+                            <tr class="row">
+                            <td class="am-link-muted am-hide-sm-down">{{ time_span(post['time']) }}</td>
+                            <td>
+                                {% if post.get('star') %}<span class="am-text-primary">[精华]</span>{% end %}
+                                <a href="/post/{{ post['_id'] }}" >
+                                        {{ post['title'] }}
+                                </a>
+                            </td>
+                            <td class="am-text-center am-hide-sm-down">
+                                {% if post['charge'] and current_user["username"] not in post["buyer"] %}
+                                <span class="am-badge am-badge-warning">{{ post['charge'] }}金币</span>
+                                {% elif current_user["username"] in post["buyer"] %}
+                                <span class="am-badge am-badge-secondary">已购买</span>
+                                {% else %}
+                                <span class="am-badge am-badge-success">免费</span>
+                                {% end %}
+                            </td>
+                            <td class="am-text-right"><a href="/user/detail/{{ post['user'] }}">{{ post['user'] }}</a></td>
+                          </tr>
+                          {% end %}
+                      </table>
+
+            </div>
+
+            <div class="zhangxp-forum-right">
+            <p class="music-font">80后经典歌曲</p>
+                         <table>
+                          <tr class="music_tr">
+                          <audio id="musicHLXD" src="static/music/hlxjg.mp3" loop="loop">你的浏览器不支持audio标签。</audio>
+                              <a class="zhangxp-image-hover" href="javascript:playPauseHLXD();"><img src="static/images/hlxd.jpg" class="music_photo" id="music_btnHLXD"/></a>
+                          </tr>
+                          <tr class="music_tr"> <audio id="musicHMJZ" src="static/music/hmjz.mp3"  loop="loop">你的浏览器不支持audio标签。</audio>
+                           <a class="zhangxp-image-hover" href="javascript:playPauseHMJZ();"><img src="static/images/hmjz.jpg" class="music_photo" id="music_btnHMJZ"/></a>
+                          </tr>
+                           <tr class="music_tr"><audio id="musicSKBT" src="static/music/skbt.mp3"  loop="loop">你的浏览器不支持audio标签。</audio><a class="zhangxp-image-hover" href="javascript:playPauseSKBT();"><img src="static/images/skbt.jpg" class="music_photo" id="music_btnSKBT"/></a>
+                           </tr>
+                           </table>
+            </div>
+
+</div>
+
+{% end %}
+{% block footer_static %}
+    <script src="{{ static_url('assets/js/app.js') }}"></script>
+{% end %}

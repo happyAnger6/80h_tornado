@@ -1,0 +1,99 @@
+{% extends "base.htm" %}
+
+{% block body %}
+{% include "header.htm" %}
+
+<div class="register-container">
+
+	<form method="post" class="register-form" id="form">
+	<legend>注册新用户:</legend>
+	<div class="register-tr">
+		<lable class ="register-prompt">*登录名</lable>
+		<div class="register-input"><input type="text" name="username" id="username"></div>
+		<div class="register-span"><span id="usernameSpan"></span></div>
+	</div>
+
+	<div class="register-tr">
+		<lable class ="register-prompt">*密码</lable>
+		<div class="register-input"><input type="password" name="password" id="password"></div>
+		<div class="register-span"><span id="passwordSpan"></span></div>
+	</div>
+
+	<div class="register-tr">
+		<lable class ="register-prompt">*再次输入密码</lable>
+		<div class="register-input"><input type="password" name="repassword" id="repassword"></div>
+		<div class="register-span"><span id="repasswordSpan"></span></div>
+	</div>
+
+	<div class="register-tr">
+		<lable class ="register-prompt">性别</lable>
+		<div class="register-input"> <input type="radio" name="gender" value="male">男<input type="radio" name="gender" value="female">女<span id="genderSpan"></span></div>
+	</div>
+
+
+	<div class="register-tr">
+		<lable class ="register-prompt">出生日期</lable>
+		<div class="register-input"><input type="date" name="selectdate" id="selectdate"/></div>
+		<div class="register-span"><span id="birthdaySpan"></span></div>
+	</div>
+
+	<div class="register-tr">
+		<lable class ="register-prompt">选择头像</lable>
+		<div class="register-input"><input type="file" name="head" value="headimg" id="headimg" /></div>
+		<div class="register-span"><span id="headimgSpan"></span></div>
+	</div>
+
+	<div class="register-tr">
+	<p>带*号为必填项</p>
+	</div>
+
+	<input type="submit" class="btn-register" value="新用户注册">
+		<a href="#" class="btn-login">已有账号直接登录</a>
+	
+	
+           <!-- <table border="1" width="80%" align="center" cellpadding="5" cellspacing="0">
+				<tr>
+					<td width="40%">*登录名:</td>
+					<td><input type="text" name="username" id="username"><span id="usernameSpan"></span></td>
+				</tr>
+				
+				<tr>
+					 <td>*密码:</td>
+					 <td><input type="password" name="password" id="password"><span id="passwordSpan"></span></td>
+				</tr>
+				
+				<tr>
+			      <td>*再次输入密码:</td>
+				  <td><input type="password" name="password" id="password"><span id="passwordSpan"></span></td>
+			    </tr>
+				
+				<tr>
+                        <td>
+                            性别:
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" value="male">男<input type="radio" name="gender" value="female">女<span id="genderSpan"></span>
+                        </td>
+               </tr>
+			   
+			   <tr>
+			   <td>出生日期:</td>
+			   <td><input type="date" name="selectdate" value="birthday" /></td>
+			   </tr>
+			   
+			   <tr>
+			   <td>选择头像</td>
+			   <td><input type="file" name="head" value="headimg" /></td>
+			   </tr>
+			   
+			   <tr><td colspan="2">带*号为必填项</td></tr>
+			   
+			
+			</table>-->
+	</form>
+	
+	</div>
+{% end %}
+{% block footer_static %}
+<script src="{{ static_url('assets/js/register.js') }}"></script>
+{% end %}

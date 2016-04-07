@@ -1,0 +1,28 @@
+
+#music_question1,#dh_question1,#sp_question1,#game_question1£¬#game_question2{
+    display:none;
+}
+
+#questions
+{
+    margin-left:300px;
+}
+#btn_submit{
+    width:100px;
+    height:50px;
+    color:red;
+    margin-left:700px;
+}
+.correct{
+    background-color:#24399f;
+    color:white;
+}
+#result,#result1{
+    margin-left:600px;
+    display:none;
+    color:red;
+    font-family: Georgia, serif;
+    font-weight:bold;
+    font-size:20px;
+}
+

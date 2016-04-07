@@ -1,0 +1,40 @@
+{% extends "base.htm" %}
+
+{% block header_title %}主页{% end %}
+{% block body %}
+{% include "header.htm" %}
+<div class="box">
+    <ul class="menu">
+        <li class="level1">
+            <a href="#none">衬衫</a>
+            <ul class="level2">
+                <li><a href="#none">短袖衬衫</a></li>
+                <li><a href="#none">长袖衬衫</a></li>
+                <li><a href="#none">短袖T恤</a></li>
+                <li><a href="#none">长袖T恤</a></li>
+            </ul>
+        </li>
+         <li class="level1">
+            <a href="#none">卫衣</a>
+            <ul class="level2">
+                <li><a href="#none">开襟卫衣</a></li>
+                <li><a href="#none">套头卫衣</a></li>
+                <li><a href="#none">运动卫衣</a></li>
+                <li><a href="#none">童装卫衣</a></li>
+            </ul>
+        </li>
+         <li class="level1">
+            <a href="#none">裤子</a>
+            <ul class="level2">
+                <li><a href="#none">短裤</a></li>
+                <li><a href="#none">休闲裤</a></li>
+                <li><a href="#none">牛仔裤</a></li>
+                <li><a href="#none">免烫卡其裤</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+{% end %}
+{% block footer_static %}
+<script src="{{ static_url('assets/js/jquery/jquery_test.js') }}"></script>
+{% end %}

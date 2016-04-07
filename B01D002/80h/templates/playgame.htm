@@ -1,0 +1,83 @@
+{% extends "base.htm" %}
+
+{% block header_title %}主页{% end %}
+{% block body %}
+
+<div class="zhangxp-answer-container">
+
+        <div class="zhangxp-answer-header">
+        <img src="/static/images/header.jpg" width="100%" height="100%"/>
+        </div>
+
+        <div class="zhangxp-answer-question">
+
+
+            <div class="zhangxp-timu"><span class="font-timu">{{ game['question'] }}</span>
+            </div>
+
+            {% if  game['resource_type']  == 0 %}
+            <div class="zhangxp-timu-img">
+            <img src="{{ get_game_avatar(game['path']) }}" width="100%" height="100%" />
+            </div>
+            {% elif  game['resource_type']  == 1 %}
+            <div class="zhangxp-timu-img"><img src="/static/images/syj1.jpg" width="100%" height="100%"></div>
+
+		    <div class="zhangxp-timu-audio"><audio controls="controls">
+        <source src="{{ get_game_avatar(game['path']) }}" type="audio/mpeg">
+非常抱歉,你的浏览器不支持此功能.
+    </audio></div>
+            {%  end  %}
+
+        </div>
+
+
+
+
+
+   <!-- <div id="question">{{ game['question'] }}</div>
+    {% if  game['resource_type']  == 0 %}
+    <div><img class="game_pic" src="{{ get_game_avatar(game['path']) }}" width="300" height="150"></div>
+    {% elif  game['resource_type']  == 1 %}
+    <div><img class="game_pic" src="/static/images/syj1.jpg" width="300" height="150"></div>
+    <div><audio controls="controls">
+        <source src="{{ get_game_avatar(game['path']) }}" type="audio/mpeg">
+非常抱歉,你的浏览器不支持此功能.
+    </audio></div>
+    {%  end  %}-->
+
+    <div class="zhangxp-answer-daan">
+
+            <div class="daan-img"><img width="100%" height="100%" src="/static/images/20080312border2.gif"/></div>
+
+            <div class="daan-button"><button type="button" class="daan-button-text" id="button1"  value="0">A.{{ game['answer1'] }}</button></div>
+            <div class="daan-button"><button type="button" class="daan-button-text" id="button2" value="1">B.{{ game['answer2'] }}</button></div>
+            <div class="daan-button"><button type="button" class="daan-button-text" id="button3"  value="2">C.{{ game['answer3'] }}</button></div>
+            <div class="daan-button"><button type="button" class="daan-button-text" id ="button4"  value="3">D.{{ game['answer4'] }}</button></div>
+
+            <div class="img-promot"><img src="/static/images/right.jpg" id="right-img" /><img src="/static/images/wrong.jpg" id="wrong-img" /></div>
+
+	</div>
+
+   <!-- <input class="answer" type="radio" name="answer" value="0"/>
+    <label>A.{{ game['answer1'] }}</label>
+    <input class="answer" type="radio" name="answer" value="1"/>
+    <label>B.{{ game['answer2'] }}</label>
+    <input class="answer" type="radio" name="answer" value="2"/>
+    <label>C.{{ game['answer3'] }}</label>
+    <input class="answer" type="radio" name="answer" value="3"/>
+    <label>D.{{ game['answer4'] }}</label>
+    </div>-->
+
+<div>
+    <form type="hidden" action="/playgame/gamepass/{{index}}" method="get">
+        <input id="right_answer" type="hidden" name="answer" value="{{ game['right_answer'] }}">
+    <input id="index" type="hidden" name="index" value="{{ index }}">
+        <button type="hidden" id="btn_submit">交卷</button>
+    </form>
+</div>
+
+    </div>
+{% end %}
+{% block footer_static %}
+<script src="{{ static_url('assets/js/games/game_check.js') }}"></script>
+{% end %}
